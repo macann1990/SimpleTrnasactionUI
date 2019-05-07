@@ -1,0 +1,12 @@
+p {
+  font-family: Lato;
+}
+
+mat-toolbar{
+  background-color:#337ab7;
+  color: white;
+}
+
+.center {
+  margin: auto;
+}
