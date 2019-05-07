@@ -24,9 +24,13 @@ const account_data : IAccount[] = [
 
 export class AccountComponent  {
   displayedColumns: string[] = ['accountId', 'name', 'email', 'contact', 'delete'];
-  dataSource = account_data;
+  dataSource: any[];// = account_data;
 
-  constructor(private userDetailsList: AccountService){
-    this.dataSource = userDetailsList;
+  constructor(private acctService: AccountService){
+  }
+
+   ngOnInit() {
+    this.acctService.getData()
+    .subscribe((data: any[]) => this.dataSource = data);
   }
 }
